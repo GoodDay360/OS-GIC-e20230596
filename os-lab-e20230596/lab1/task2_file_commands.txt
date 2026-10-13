@@ -1,0 +1,13 @@
+/home/gic-chhem-sophea/oslab-work/lab1/task2_files
+candle.txt
+ocean.txt
+This is file ocean
+This is file candle
+candle.txt
+ocean.txt
+ocean_copy.txt
+candle_renamed.txt
+ocean.txt
+ocean_copy.txt
+candle_renamed.txt
+ocean.txt
