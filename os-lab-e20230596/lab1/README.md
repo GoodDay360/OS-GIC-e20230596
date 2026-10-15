@@ -77,6 +77,10 @@ Example: sleep 30 & echo "Hello"
 
 Briefly describe the multitasking you saw. How many `sleep` lines did `ps` show? What does that show about the system, and what does it **not** show about how the processor is shared?
 
+- `ps` show 2 lines of `sleep`
+- It show it process id (PID) and it can keep multiple proccess active at the same time.
+- Currently we dont know if it run in the same core or not. How long it gonna run and who running it.
+
 <!-- SCREENSHOT REQUIREMENT: your terminal with the `ps` result and your prompt. -->
 ![Task 5](https://github.com/GoodDay360/OS-GIC-e20230596/blob/main/os-lab-e20230596/images/task5.jpg?raw=true)
 
