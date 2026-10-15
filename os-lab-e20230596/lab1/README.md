@@ -2,10 +2,10 @@
 
 Copy this template to `os-lab-YOUR_ID/lab1/README.md` in your own repository. Follow [the instructions](lab1-instruction.md). Your prediction and checkpoint answers are already saved by `oslab`; do not copy them here.
 
-- **Student Name:**
-- **Student ID:**
-- **Ubuntu username on the server:**
-- **My values** (`oslab values lab1`): file1 = , file2 = , count =
+- **Student Name:** CHHEM SOPHEA
+- **Student ID:** e20230596
+- **Ubuntu username on the server:** gic-chhem-sophea
+- **My values** (`oslab values lab1`): file1 = ocean, file2 = candle, count = 2
 
 ---
 
