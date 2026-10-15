@@ -52,8 +52,11 @@ ocean.txt
 
 Explain the difference you observed between `remove` and `purge`.
 
+- `remove` command removes the package but keeps its config files.
+- `purge` command removes the packages and also everything related to the packages.
+
 <!-- SCREENSHOT REQUIREMENT: your terminal after the purge, showing `ls -ld /etc/mc` and your prompt. -->
-![Task 3](images/task3.png)
+![Task 3](https://github.com/GoodDay360/OS-GIC-e20230596/blob/main/os-lab-e20230596/images/task3.jpg?raw=true)
 
 ---
 
@@ -74,7 +77,7 @@ Example: sleep 30 & echo "Hello"
 Briefly describe the multitasking you saw. How many `sleep` lines did `ps` show? What does that show about the system, and what does it **not** show about how the processor is shared?
 
 <!-- SCREENSHOT REQUIREMENT: your terminal with the `ps` result and your prompt. -->
-![Task 5](images/task5.png)
+![Task 5](https://github.com/GoodDay360/OS-GIC-e20230596/blob/main/os-lab-e20230596/images/task5.jpg?raw=true)
 
 ---
 
@@ -82,8 +85,10 @@ Briefly describe the multitasking you saw. How many `sleep` lines did `ps` show?
 
 State whether your system is running on a virtual machine or physical hardware, based on the command outputs.
 
+Currently system Hypervisor vender is KVM which state that it's a virtual machine.
+
 <!-- SCREENSHOT REQUIREMENT: your terminal with the output of the four commands and your prompt. -->
-![Task 6](images/task6.png)
+![Task 6](https://github.com/GoodDay360/OS-GIC-e20230596/blob/main/os-lab-e20230596/images/task6.jpg?raw=true)
 
 ---
 
@@ -94,8 +99,20 @@ For each prediction answer (`oslab predict lab1`), write **confirmed** or **corr
 ---
 
 ## Plus / Challenge (only if you did them)
+1. Run lscpu without grep and find the lines about the hypervisor. Run systemd-detect-virt on your own Ubuntu and on the server. Do they give the same answer? Why?
+- They don't give the same answer.
+- When I run `systemd-detect-virt` on my own ubuntu it show none, because I'm using a real physical hardware. I don't use wsl or any virtual machine.
+- Meanwhile on the it show different from mine because it running on KVM which is a virtual machine.
 
-Your answers.
+2. A virtual machine can run inside another one. Look at hostname and uname -r on both machines. Which values are the same, and which are different?
+
+* All values are different.
+* My own ubuntu
+  * hostname: goodday-katana15b12vfk
+  * uname -r: 6.18.43-1-lts
+* On server
+  * hostname: i4gic-os
+  * uname -r: 7.0.0-38-generic
 
 ## AI Note (optional)
 
