@@ -31,6 +31,7 @@ Briefly describe your experience creating, copying, renaming and deleting files.
 - Delete file use command "rm" follow by filename as first params.
 
 <!-- You may show the contents of task2_file_commands.txt here; no screenshot needed. -->
+```
 /home/gic-chhem-sophea/oslab-work/lab1/task2_files
 candle.txt
 ocean.txt
@@ -44,7 +45,7 @@ ocean.txt
 ocean_copy.txt
 candle_renamed.txt
 ocean.txt
-
+```
 
 ---
 
