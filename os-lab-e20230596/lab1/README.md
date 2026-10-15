@@ -107,7 +107,7 @@ For each prediction answer (`oslab predict lab1`), write **confirmed** or **corr
 1. Run lscpu without grep and find the lines about the hypervisor. Run systemd-detect-virt on your own Ubuntu and on the server. Do they give the same answer? Why?
 - They don't give the same answer.
 - When I run `systemd-detect-virt` on my own ubuntu it show none, because I'm using a real physical hardware. I don't use wsl or any virtual machine.
-- Meanwhile on the it show different from mine because it running on KVM which is a virtual machine.
+- Meanwhile on the server it show different from mine because it running on KVM which is a virtual machine.
 
 2. A virtual machine can run inside another one. Look at hostname and uname -r on both machines. Which values are the same, and which are different?
 
