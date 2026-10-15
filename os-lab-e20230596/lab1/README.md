@@ -68,7 +68,7 @@ Briefly describe how you ran a background process and found it in the process li
 - Currently to run a background process we learn to use it with sleep command.
 Example: sleep 30 & echo "Hello"
 - To check running process I use command "ps" which list all running process.
-- Program is an app or instruction that store on syste.
+- Program is an app or instruction that store on system.
 - Process is an active running program on the system.
 
 ---
