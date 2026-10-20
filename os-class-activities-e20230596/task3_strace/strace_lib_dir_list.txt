@@ -1,0 +1,16 @@
+newfstatat(AT_FDCWD, "/etc/ld.so.cache", {st_mode=S_IFREG|0644, st_size=232455, ...}, 0) = 0
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+close(3)                                = 0
+newfstatat(AT_FDCWD, "/etc/ld.so.cache", {st_mode=S_IFREG|0644, st_size=232455, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+close(3)                                = 0
+openat(AT_FDCWD, ".", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+getdents64(3, 0x563938e93040 /* 4 entries */, 32768) = 112
+newfstatat(AT_FDCWD, ".", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "..", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "dir_list_sys", {st_mode=S_IFREG|0755, st_size=16344, ...}, 0) = 0
+newfstatat(AT_FDCWD, "dir_list_lib", {st_mode=S_IFREG|0755, st_size=16288, ...}, 0) = 0
+getdents64(3, 0x563938e93040 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+write(1, "Filename                       S"..., 254) = 254
++++ exited with 0 +++

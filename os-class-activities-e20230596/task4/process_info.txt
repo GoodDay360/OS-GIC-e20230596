@@ -1,0 +1,75 @@
+/proc/self/status (first 20 lines)
+Name:	head
+Umask:	0022
+State:	R (running)
+Tgid:	38659
+Ngid:	0
+Pid:	38659
+PPid:	38658
+TracerPid:	0
+Uid:	1000	1000	1000	1000
+Gid:	1000	1000	1000	1000
+FDSize:	64
+Groups:	3 108 952 979 990 998 1000 
+NStgid:	38659
+NSpid:	38659
+NSpgid:	38658
+NSsid:	38658
+Kthread:	0
+VmPeak:	    6084 kB
+VmSize:	    6084 kB
+VmLck:	       0 kB
+
+/proc/self/maps (first 20 lines)
+5639088ef000-5639088f1000 r--p 00000000 103:05 12337918                  /usr/bin/head
+5639088f1000-5639088f9000 r-xp 00002000 103:05 12337918                  /usr/bin/head
+5639088f9000-5639088fc000 r--p 0000a000 103:05 12337918                  /usr/bin/head
+5639088fc000-5639088fd000 r--p 0000c000 103:05 12337918                  /usr/bin/head
+5639088fd000-5639088fe000 rw-p 0000d000 103:05 12337918                  /usr/bin/head
+563929364000-563929385000 rw-p 00000000 00:00 0                          [heap]
+7fb906600000-7fb9068f5000 r--p 00000000 103:05 12418684                  /usr/lib/locale/locale-archive
+7fb906a00000-7fb906a24000 r--p 00000000 103:05 12323860                  /usr/lib/libc.so.6
+7fb906a24000-7fb906b9f000 r-xp 00024000 103:05 12323860                  /usr/lib/libc.so.6
+7fb906b9f000-7fb906c15000 r--p 0019f000 103:05 12323860                  /usr/lib/libc.so.6
+7fb906c15000-7fb906c19000 r--p 00214000 103:05 12323860                  /usr/lib/libc.so.6
+7fb906c19000-7fb906c1b000 rw-p 00218000 103:05 12323860                  /usr/lib/libc.so.6
+7fb906c1b000-7fb906c23000 rw-p 00000000 00:00 0 
+7fb906d22000-7fb906d27000 rw-p 00000000 00:00 0 
+7fb906d27000-7fb906d60000 r--p 00000000 103:05 5898269                   /etc/ld.so.cache
+7fb906d60000-7fb906d64000 r--p 00000000 00:00 0                          [vvar]
+7fb906d64000-7fb906d66000 r--p 00000000 00:00 0                          [vvar_vclock]
+7fb906d66000-7fb906d68000 r-xp 00000000 00:00 0                          [vdso]
+7fb906d68000-7fb906d69000 r--p 00000000 103:05 12323840                  /usr/lib/ld-linux-x86-64.so.2
+7fb906d69000-7fb906d96000 r-xp 00001000 103:05 12323840                  /usr/lib/ld-linux-x86-64.so.2
+
+/proc/self/maps region labels
+5577f38d7000-5577f391c000 rw-p 00000000 00:00 0                          [heap]
+7fbfef800000-7fbfef824000 r--p 00000000 103:05 12323860                  /usr/lib/libc.so.6
+7fbfef824000-7fbfef99f000 r-xp 00024000 103:05 12323860                  /usr/lib/libc.so.6
+7fbfef99f000-7fbfefa15000 r--p 0019f000 103:05 12323860                  /usr/lib/libc.so.6
+7fbfefa15000-7fbfefa19000 r--p 00214000 103:05 12323860                  /usr/lib/libc.so.6
+7fbfefa19000-7fbfefa1b000 rw-p 00218000 103:05 12323860                  /usr/lib/libc.so.6
+7fbfefbe1000-7fbfefbe5000 r--p 00000000 00:00 0                          [vvar]
+7fbfefbe7000-7fbfefbe9000 r-xp 00000000 00:00 0                          [vdso]
+7ffc8b330000-7ffc8b352000 rw-p 00000000 00:00 0                          [stack]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
+
+Command line from a short-lived shell
+tr \0   
+
+ps aux (first 15 lines)
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.0  21352 15688 ?        Ss   09:27   0:02 /usr/lib/systemd/systemd --switched-root --system --deserialize=61
+root           2  0.0  0.0      0     0 ?        S    09:27   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        S    09:27   0:00 [pool_workqueue_release]
+root           4  0.0  0.0      0     0 ?        I<   09:27   0:00 [kworker/R-rcu_gp]
+root           5  0.0  0.0      0     0 ?        I<   09:27   0:00 [kworker/R-sync_wq]
+root           6  0.0  0.0      0     0 ?        I<   09:27   0:00 [kworker/R-kvfree_rcu_reclaim]
+root           7  0.0  0.0      0     0 ?        I<   09:27   0:00 [kworker/R-slub_flushwq]
+root           8  0.0  0.0      0     0 ?        I<   09:27   0:00 [kworker/R-netns]
+root          10  0.0  0.0      0     0 ?        I<   09:27   0:00 [kworker/0:0H-events_highpri]
+root          13  0.0  0.0      0     0 ?        I<   09:27   0:00 [kworker/R-mm_percpu_wq]
+root          15  0.0  0.0      0     0 ?        S    09:27   0:00 [ksoftirqd/0]
+root          16  0.1  0.0      0     0 ?        I    09:27   0:04 [rcu_preempt]
+root          17  0.0  0.0      0     0 ?        S    09:27   0:00 [rcub/0]
+root          18  0.0  0.0      0     0 ?        S    09:27   0:00 [rcu_exp_par_gp_kthread_worker/0]
