@@ -12,10 +12,6 @@ Screenshot of running `hello_syscall.c` on Linux:
 
 ![Hello syscall](screenshots/hello_syscall.png)
 
-Screenshot of running `hello_winapi.c` on Windows (CMD/PowerShell/VS Code):
-
-![Hello WinAPI](screenshots/hello_winapi.png)
-
 Screenshot of running `copyfilesyscall.c` on Linux:
 
 ![Copy file syscall](screenshots/copyfilesyscall.png)
@@ -112,28 +108,6 @@ Screenshot of running `copyfilesyscall.c` on Linux:
 
 ---
 
-## Optional Bonus: Windows API (`file_creator_win.c`)
-
-Screenshot of running on Windows:
-
-![Task 1 - Windows](screenshots/task1_win.png)
-
-### Bonus Questions
-
-1. **Why does Windows use `HANDLE` instead of integer file descriptors?**
-
-   > [Your answer]
-
-2. **What is the Windows equivalent of POSIX `fork()`? Why is it different?**
-
-   > [Your answer]
-
-3. **Can you use POSIX calls on Windows?**
-
-   > [Your answer]
-
----
-
 ## Task 3: strace Analysis
 
 **Describe what you observed:** [What surprised you about the strace output? How many more system calls did the library version make?]
@@ -156,8 +130,11 @@ Screenshot of running on Windows:
 
 ### strace -c Summary Comparison
 
-![strace summary - Library](screenshots/strace_summary_lib.png)
-![strace summary - Syscall](screenshots/strace_summary_sys.png)
+- strace summary - Dir List
+![strace summary - Dir List](screenshots/task3-compare-strace-summary-1.png)
+- strace summary - reader
+![strace summary - reader](screenshots/task3-compare-strace-summary-2.png)
+
 
 ### Questions
 
@@ -252,4 +229,4 @@ Screenshot of your diagram of the OS layers, labeled with real data from your sy
 
 What did you learn from this activity? What was the most surprising difference between library functions and system calls?
 
-> [Write your reflection here]
+> I learned that library functions are usually handled by a program's libraries, while system calls ask the kernel to do something. I was surprised that a familiar function like `printf` doesn't directly write to the screen; it can use a system call such as `write` to get the kernel involved. That extra step makes the difference between the two clearer to me.

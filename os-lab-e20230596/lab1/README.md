@@ -57,7 +57,7 @@ Explain the difference you observed between `remove` and `purge`.
 - `purge` command removes the packages and also everything related to the packages.
 
 <!-- SCREENSHOT REQUIREMENT: your terminal after the purge, showing `ls -ld /etc/mc` and your prompt. -->
-![Task 3](https://github.com/GoodDay360/OS-GIC-e20230596/blob/main/os-lab-e20230596/images/task3.jpg?raw=true)
+![Task 3](images/task3.jpg)
 
 ---
 
@@ -82,7 +82,7 @@ Briefly describe the multitasking you saw. How many `sleep` lines did `ps` show?
 - Currently we dont know if it run in the same core or not. How long it gonna run and who running it.
 
 <!-- SCREENSHOT REQUIREMENT: your terminal with the `ps` result and your prompt. -->
-![Task 5](https://github.com/GoodDay360/OS-GIC-e20230596/blob/main/os-lab-e20230596/images/task5.jpg?raw=true)
+![Task 5](images/task5.jpg)
 
 ---
 
@@ -93,7 +93,7 @@ State whether your system is running on a virtual machine or physical hardware, 
 Currently system Hypervisor vender is KVM which state that it's a virtual machine.
 
 <!-- SCREENSHOT REQUIREMENT: your terminal with the output of the four commands and your prompt. -->
-![Task 6](https://github.com/GoodDay360/OS-GIC-e20230596/blob/main/os-lab-e20230596/images/task6.jpg?raw=true)
+![Task 6](images/task6.jpg)
 
 ---
 

@@ -1,0 +1,40 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="A_17ZJUc5RMrautOqNcW">
+    <mxGraphModel dx="894" dy="1002" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="F-vF5uLHyWq0UgzuJn8y-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;HARDWARE&lt;/span&gt;&lt;/div&gt;CPU: 12th Gen Intel Core i7-12650H (10 cores / 16 threads)&lt;br&gt;RAM: 32,554,856 kB (~32 GB)&amp;nbsp;&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="240" x="300" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="F-vF5uLHyWq0UgzuJn8y-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;KERNAL SPACE&lt;/span&gt;&lt;/div&gt;Linux 6.18.57-1-lts&lt;br&gt;Loaded modules:&amp;nbsp; rfcomm, bridge, snd_seq&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="210" x="315" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="F-vF5uLHyWq0UgzuJn8y-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div style=&quot;text-align: center;&quot;&gt;SYSTEM CALL INTERFACE&lt;/div&gt;&lt;br&gt;&lt;div&gt;open(), read(), write(), mmap(), fork()&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="210" x="315" y="325" as="geometry" />
+        </mxCell>
+        <mxCell id="F-vF5uLHyWq0UgzuJn8y-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div style=&quot;text-align: center;&quot;&gt;USER SPACE&amp;nbsp;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;div&gt;Task 1 programs (executed sequentially):&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;file_creator_lib&amp;nbsp; -&amp;gt; file_creator_sys&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;file_reader_lib&amp;nbsp; &amp;nbsp;-&amp;gt; file_reader_sys&lt;/div&gt;&lt;/div&gt;&lt;div&gt;Task 2 programs (executed sequentially):&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;dir_list_lib      -&amp;gt; dir_list_sy&lt;br&gt;&lt;/span&gt;process_info.txt sample:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;head (PID 38659, PPID 38658)&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;mapped: /usr/bin/head, libc, heap, stack&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;also records short-lived `tr` and `ps aux` output&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="315" x="268" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="F-vF5uLHyWq0UgzuJn8y-5" edge="1" parent="1" source="F-vF5uLHyWq0UgzuJn8y-1" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="F-vF5uLHyWq0UgzuJn8y-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="425" y="170" as="sourcePoint" />
+            <mxPoint x="475" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F-vF5uLHyWq0UgzuJn8y-6" edge="1" parent="1" source="F-vF5uLHyWq0UgzuJn8y-2" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.525;entryY=-0.036;entryDx=0;entryDy=0;entryPerimeter=0;" target="F-vF5uLHyWq0UgzuJn8y-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="410" y="250" as="sourcePoint" />
+            <mxPoint x="410" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F-vF5uLHyWq0UgzuJn8y-7" edge="1" parent="1" source="F-vF5uLHyWq0UgzuJn8y-3" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="F-vF5uLHyWq0UgzuJn8y-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="570" y="370" as="sourcePoint" />
+            <mxPoint x="575" y="455" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
