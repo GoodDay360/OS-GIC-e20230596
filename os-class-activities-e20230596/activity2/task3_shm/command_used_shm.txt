@@ -1,0 +1,20 @@
+ 9658* clear
+ 9659* winetricks tmog
+ 9660* wine procexp
+ 9661  clear
+ 9662  wine ./winprocess.exe
+ 9663* clear
+ 9664* wine procexp
+ 9665  clear
+ 9666  wine ./winprocess.exe
+ 9667* wine taskmgr
+ 9668* wine procexp
+ 9669  clear
+ 9670  x86_64-w64-mingw32-gcc -o winprocess.exe winprocess.c
+ 9671  wine ./winprocess.exe
+ 9672  clear
+ 9673  gcc -o shm-producer shm-producer.c -lrt\ngcc -o shm-consumer shm-consumer.c -lrt
+ 9674  cd ../
+ 9675  cd task3_shm
+ 9676  gcc -o shm-producer shm-producer.c -lrt\ngcc -o shm-consumer shm-consumer.c -lrt
+ 9677  # Step 1: Run the producer (writes to shared memory)\n./shm-producer\n\n# Step 2: Run the consumer (reads from shared memory and saves output)\n./shm-consumer > result-shm-ipc.txt\n\n# View the result\ncat result-shm-ipc.txt

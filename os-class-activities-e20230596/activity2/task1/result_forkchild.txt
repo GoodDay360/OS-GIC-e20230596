@@ -1,0 +1,11 @@
+total 36
+drwxr-xr-x 2 goodday goodday  4096 ១១  5 12:17 .
+drwxr-xr-x 3 goodday goodday  4096 ១១  5 12:13 ..
+-rw-r--r-- 1 goodday goodday   613 ១១  5 12:17 command_used_forkchild.txt
+-rwxr-xr-x 1 goodday goodday 16488 ១១  5 12:07 forkchild
+-rw-r--r-- 1 goodday goodday  1304 ១១  5 12:04 forkchild.c
+-rw-r--r-- 1 goodday goodday     0 ១១  5 12:16 result_forkchild.txt
+Parent process (PID: 25583) — creating child...
+Parent: waiting for child (PID: 25584) to finish...
+Parent: child exited with status 0
+Parent: done.

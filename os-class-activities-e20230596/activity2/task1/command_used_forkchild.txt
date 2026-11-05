@@ -1,0 +1,20 @@
+ 9611* ps -ef --forest | grep forkchild
+ 9612* ./forkchild > result_forkchild.txt 2>&1
+ 9613  ps -ef --forest | grep forkchild
+ 9614* clear
+ 9615* copilot
+ 9616* clear
+ 9617* ./forkchild > result_forkchild.txt 2>&1
+ 9618  clear
+ 9619  ps -ef --forest | grep forkchild
+ 9620  history | tail -n 20 > command_used_forkchild.txt
+ 9621* clear
+ 9622  ls
+ 9623  rm command_used_forkchild.txt
+ 9624  clear
+ 9625  cd /home/goodday/Code/OS-GIC-e20230596/os-class-activities-e20230596/activity2/task1
+ 9626  clear
+ 9627  ls
+ 9628  clear
+ 9629* ./forkchild > result_forkchild.txt 2>&1
+ 9630  ps -ef --forest | grep forkchild
