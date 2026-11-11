@@ -1,0 +1,18 @@
+file1='vendor list.txt' 
+file2='payroll may.txt'
+
+In Core2, step 2:
+mv "$OSLAB_WORKSPACE/lab2/incoming/$file2" "$OSLAB_WORKSPACE/lab2/reports/$fil2"
+
+In Core 2, step 3: 
+I use relative paths. 
+cp "reports/$file1" "TechCorp/$owner/$file1"
+cp "reports/$file2" "TechCorp/$owner/$file2"
+For asbolute paths we should only use it
+when we currently inside a nested child folder 
+and try to do operation like "mv" or "cp"
+on files from current "pwd" folder to parent folder 
+or any other path that not in parent.
+ 
+Error: cat: 'reports/vendor list.txt': No such file or directory
+Fix: cat "../../reports/$file1"
