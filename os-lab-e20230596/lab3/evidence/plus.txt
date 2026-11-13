@@ -1,0 +1,1 @@
+I expected notes/river[!1]* to print only river2.txt, but it also printed river.log, because "." is one character that is not 1 (river12.txt starts with 1, so it was skipped).

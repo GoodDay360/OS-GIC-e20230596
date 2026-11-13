@@ -1,0 +1,25 @@
+
+=== BEFORE RENAME ===
+19017411 -rw-rw-r-- 2 gic-chhem-sophea gic-chhem-sophea 12 Nov 11 15:52 river-hard.txt
+19017225 lrwxrwxrwx 1 gic-chhem-sophea gic-chhem-sophea  9 Nov 13 08:14 river-soft.txt -> river.txt
+19017411 -rw-rw-r-- 2 gic-chhem-sophea gic-chhem-sophea 12 Nov 11 15:52 river.txt
+hard: version 286
+soft: version 286
+stored target: river.txt
+
+=== AFTER RENAME, BEFORE REPAIR ===
+19017411 -rw-rw-r-- 2 gic-chhem-sophea gic-chhem-sophea 12 Nov 11 15:52 river-draft.txt
+19017411 -rw-rw-r-- 2 gic-chhem-sophea gic-chhem-sophea 12 Nov 11 15:52 river-hard.txt
+19017225 lrwxrwxrwx 1 gic-chhem-sophea gic-chhem-sophea  9 Nov 13 08:14 river-soft.txt -> river.txt
+hard: version 286
+stored target: river.txt
+soft: cat: river-soft.txt: No such file or directory
+
+=== AFTER REPAIR ===
+19017411 -rw-rw-r-- 2 gic-chhem-sophea gic-chhem-sophea 12 Nov 11 15:52 river-draft.txt
+19017411 -rw-rw-r-- 2 gic-chhem-sophea gic-chhem-sophea 12 Nov 11 15:52 river-hard.txt
+19017225 lrwxrwxrwx 1 gic-chhem-sophea gic-chhem-sophea 15 Nov 13 08:26 river-soft.txt -> river-draft.txt
+stored target: river-draft.txt
+hard: version 286
+soft: version 286
+Decision: I stored the relative target river-draft.txt because it is read from the links/ folder, so the link keeps working if the whole lab3 folder is moved; an absolute path would still point to the old location and the link would dangle after the move.

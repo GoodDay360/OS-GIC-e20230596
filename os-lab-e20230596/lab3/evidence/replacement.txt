@@ -1,0 +1,9 @@
+
+=== NEW FILE USING THE OLD NAME ===
+19017411 -rw-rw-r-- 2 gic-chhem-sophea gic-chhem-sophea 12 Nov 11 15:52 river-draft.txt
+19017411 -rw-rw-r-- 2 gic-chhem-sophea gic-chhem-sophea 12 Nov 11 15:52 river-hard.txt
+19017225 lrwxrwxrwx 1 gic-chhem-sophea gic-chhem-sophea  9 Nov 13 08:14 river-soft.txt -> river.txt
+19017226 -rw-rw-r-- 1 gic-chhem-sophea gic-chhem-sophea 12 Nov 13 08:16 river.txt
+river.txt: version 339
+hard: version 286
+soft: version 339

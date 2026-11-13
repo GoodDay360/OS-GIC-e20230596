@@ -1,0 +1,12 @@
+.:
+total 8
+19143398 drwxrwxr-x 2 gic-chhem-sophea gic-chhem-sophea 4096 Nov 13 08:40 links
+19143399 -rw-rw-r-- 2 gic-chhem-sophea gic-chhem-sophea   25 Nov 13 08:36 market-old.txt
+
+links:
+total 4
+19143400 lrwxrwxrwx 1 gic-chhem-sophea gic-chhem-sophea 17 Nov 13 08:40 first.txt -> ../market-old.txt
+19143399 -rw-rw-r-- 2 gic-chhem-sophea gic-chhem-sophea 25 Nov 13 08:36 hard.txt
+19143401 lrwxrwxrwx 1 gic-chhem-sophea gic-chhem-sophea  9 Nov 13 08:36 second.txt -> first.txt
+checkpoint silver market
+checkpoint silver market

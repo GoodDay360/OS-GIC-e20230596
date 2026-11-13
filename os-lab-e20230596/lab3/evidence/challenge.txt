@@ -1,0 +1,2 @@
+- Link counts: 3 at the start; after rm one.txt, two.txt and three.txt show 2; after rm two.txt, three.txt shows 1.
+- After deleting one.txt the data is not gone: cat two.txt still prints "keep me". The data is gone only when the last name is removed (link count 0) and no program still has the file open.
