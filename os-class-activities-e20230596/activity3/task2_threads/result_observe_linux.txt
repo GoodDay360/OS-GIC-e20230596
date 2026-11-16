@@ -1,0 +1,111 @@
+$ ps -eLf | grep threads_observe
+goodday   157453  157452  157453  0    5 20:04 ?        00:00:00 ./threads_observe
+goodday   157453  157452  157455  0    5 20:04 ?        00:00:00 ./threads_observe
+goodday   157453  157452  157456  0    5 20:04 ?        00:00:00 ./threads_observe
+goodday   157453  157452  157457  0    5 20:04 ?        00:00:00 ./threads_observe
+goodday   157453  157452  157458  0    5 20:04 ?        00:00:00 ./threads_observe
+
+$ ps -T -p 157453
+    PID    SPID TTY          TIME CMD
+ 157453  157453 ?        00:00:00 threads_observe
+ 157453  157455 ?        00:00:00 threads_observe
+ 157453  157456 ?        00:00:00 threads_observe
+ 157453  157457 ?        00:00:00 threads_observe
+ 157453  157458 ?        00:00:00 threads_observe
+
+--- /proc/157453/task/ listing ---
+157453
+157455
+157456
+157457
+157458
+$ ls /proc/157453/task/ | wc -l
+5
+
+$ grep -E 'Name|State|Threads' /proc/157453/status
+Name:	threads_observe
+State:	S (sleeping)
+Threads:	5
+
+$ ps -L -o pid,lwp,nlwp,psr,stat,comm -p 157453
+    PID     LWP NLWP PSR STAT COMMAND
+ 157453  157453    5  13 Sl   threads_observe
+ 157453  157455    5  12 Sl   threads_observe
+ 157453  157456    5   0 Sl   threads_observe
+ 157453  157457    5   2 Sl   threads_observe
+ 157453  157458    5  14 Sl   threads_observe
+
+$ ps -o pid,ppid,psr,comm -p 2
+    PID    PPID PSR COMMAND
+      2       0   8 kthreadd
+
+$ ps --ppid 2 -o pid,ppid,psr,comm | head -15
+    PID    PPID PSR COMMAND
+      3       2   0 pool_workqueue_release
+      4       2   0 kworker/R-rcu_gp
+      5       2   0 kworker/R-sync_wq
+      6       2   0 kworker/R-kvfree_rcu_reclaim
+      7       2   0 kworker/R-slub_flushwq
+      8       2   0 kworker/R-netns
+     10       2   0 kworker/0:0H-events_highpri
+     13       2   0 kworker/R-mm_percpu_wq
+     15       2   0 ksoftirqd/0
+     16       2   4 rcu_preempt
+     17       2   0 rcub/0
+     18       2   0 rcu_exp_par_gp_kthread_worker/0
+     19       2   6 rcu_exp_gp_kthread_worker
+     20       2   0 migration/0
+
+$ ps -eo pid,ppid,nlwp,comm --forest | head -30
+    PID    PPID NLWP COMMAND
+      2       0    1 kthreadd
+      3       2    1  \_ pool_workqueue_release
+      4       2    1  \_ kworker/R-rcu_gp
+      5       2    1  \_ kworker/R-sync_wq
+      6       2    1  \_ kworker/R-kvfree_rcu_reclaim
+      7       2    1  \_ kworker/R-slub_flushwq
+      8       2    1  \_ kworker/R-netns
+     10       2    1  \_ kworker/0:0H-events_highpri
+     13       2    1  \_ kworker/R-mm_percpu_wq
+     15       2    1  \_ ksoftirqd/0
+     16       2    1  \_ rcu_preempt
+     17       2    1  \_ rcub/0
+     18       2    1  \_ rcu_exp_par_gp_kthread_worker/0
+     19       2    1  \_ rcu_exp_gp_kthread_worker
+     20       2    1  \_ migration/0
+     21       2    1  \_ idle_inject/0
+     22       2    1  \_ cpuhp/0
+     23       2    1  \_ cpuhp/2
+     24       2    1  \_ idle_inject/2
+     25       2    1  \_ migration/2
+     26       2    1  \_ ksoftirqd/2
+     28       2    1  \_ kworker/2:0H-events_highpri
+     29       2    1  \_ cpuhp/4
+     30       2    1  \_ idle_inject/4
+     31       2    1  \_ migration/4
+     32       2    1  \_ ksoftirqd/4
+     34       2    1  \_ kworker/4:0H-events_highpri
+     35       2    1  \_ cpuhp/6
+     36       2    1  \_ idle_inject/6
+
+$ pstree -p | head -20
+systemd(1)-+-NetworkManager(838)-+-{NetworkManager}(868)
+           |                     |-{NetworkManager}(870)
+           |                     `-{NetworkManager}(872)
+           |-VBoxSVC(1184)-+-{VBoxSVC}(1194)
+           |               |-{VBoxSVC}(1195)
+           |               |-{VBoxSVC}(1197)
+           |               |-{VBoxSVC}(1198)
+           |               |-{VBoxSVC}(1201)
+           |               |-{VBoxSVC}(1202)
+           |               |-{VBoxSVC}(1203)
+           |               |-{VBoxSVC}(1204)
+           |               |-{VBoxSVC}(1218)
+           |               |-{VBoxSVC}(1219)
+           |               |-{VBoxSVC}(1223)
+           |               `-{VBoxSVC}(1224)
+           |-accounts-daemon(2429)-+-{accounts-daemon}(2439)
+           |                       |-{accounts-daemon}(2440)
+           |                       `-{accounts-daemon}(2442)
+           |-avahi-daemon(834)---avahi-daemon(877)
+           |-bluetoothd(835)
